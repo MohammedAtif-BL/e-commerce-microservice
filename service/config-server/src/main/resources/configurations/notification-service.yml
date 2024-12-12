@@ -1,0 +1,36 @@
+server:
+  port: 8040
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/notificationservice?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#  kafka:
+#    consumer:
+#      bootstrap-servers: localhost:9092
+#      group-id: paymentGroup,orderGroup
+#      auto-offset-reset: earliest
+#      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+#      properties:
+#        spring.json.trusted.packages: '*'
+#        spring.json.type.mapping: orderConfirmation:com.learning.ecommerce.kafka.OrderConfirmation,paymentConfirmation:com.learning.ecommerce.kafka.PaymentConfirmation
+  mail:
+    host: localhost
+    port: 587
+    username: mohammedatif90@gmail.com
+    password: qtgufcbzldfaienj
+    properties:
+      mail:
+        smtp:
+          trust: "*"
+        auth: true
+        starttls:
+          enabled: true
+        connectiontimeout: 5000
+        timeout: 3000
+        writetimeout: 5000
